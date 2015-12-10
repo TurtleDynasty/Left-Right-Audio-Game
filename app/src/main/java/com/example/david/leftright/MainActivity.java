@@ -4,8 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
+    boolean isLeft = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void getRandomBoolean(){
+        if(Math.random()>0.5)
+            Log.d("Debug", "true");
+        else
+            Log.d("Debug", "false");
     }
 
     public void clickLeftButton(){
